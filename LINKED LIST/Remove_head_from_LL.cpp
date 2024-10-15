@@ -1,4 +1,4 @@
-/* Array to Linked List */
+/* Remove Head from Linked List */
 #include <bits/stdc++.h>
 using namespace std;
 class Node
@@ -34,8 +34,29 @@ Node *convertArr2LL(vector<int> &arr)
     return head;
 }
 
+void print(Node *head)
+{
+    while (head != NULL)
+    {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+Node *removesHead(Node *head)
+{
+    if (head == NULL)
+        return head;
+    Node *temp = head;
+    head = head->next;
+    delete temp;
+    return head;
+}
+
 int main()
 {
     vector<int> arr = {12, 5, 8, 7} Node *head = convertArr2LL(arr);
-    cout << head->data;
+    head = removesHead(head);
+    print(head);
 }
