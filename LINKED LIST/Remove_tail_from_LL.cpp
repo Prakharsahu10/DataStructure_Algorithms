@@ -1,4 +1,4 @@
-/* Remove Head from Linked List */
+/* Remove Tail from Linked List */
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -54,11 +54,26 @@ Node *removesHead(Node *head)
     return head;
 }
 
+Node removeTail(Node *head)
+{
+    if (head == NULL || head->next == NULL)
+        return NULL;
+
+    Node *temp = head;
+    while (temp->next->next != NULL)
+    {
+        temp = temp->next;
+    }
+    delete temp->next;
+    temp->next = nullptr;
+    return head;
+}
+
 int main()
 {
     vector<int> arr = {12, 5, 8, 7}; // Semicolon added
     Node *head = convertArr2LL(arr);
-    head = removesHead(head);
+    head = removeTail(head);
     print(head);
 }
 // Time Complexity: O(1)
