@@ -1,13 +1,12 @@
-/* Preorder Traversal in Binary Tree*/
-/* Root -> Left -> Right */
+/* Inorder Traversal in Binary Tree */
+/* Left -> Root -> Right */
 
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
-// Node structure for
-// the binary tree
+// Node structure for the binary tree
 struct Node
 {
     int data;
@@ -18,9 +17,9 @@ struct Node
     Node(int val) : data(val), left(nullptr), right(nullptr) {}
 };
 
-// Function to perform preorder traversal
+// Function to perform inorder traversal
 // of the tree and store values in 'arr'
-void preorder(Node *root, vector<int> &arr)
+void inorder(Node *root, vector<int> &arr)
 {
     // If the current node is NULL
     // (base case for recursion), return
@@ -28,28 +27,27 @@ void preorder(Node *root, vector<int> &arr)
     {
         return;
     }
+    // Recursively traverse the left subtree
+    inorder(root->left, arr);
     // Push the current node's
     // value into the vector
     arr.push_back(root->data);
     // Recursively traverse
-    // the left subtree
-    preorder(root->left, arr);
-    // Recursively traverse
     // the right subtree
-    preorder(root->right, arr);
+    inorder(root->right, arr);
 }
 
-// Function to initiate preorder traversal
+// Function to initiate inorder traversal
 // and return the resulting vector
-vector<int> preOrder(Node *root)
+vector<int> inOrder(Node *root)
 {
     // Create an empty vector to
-    // store preorder traversal values
+    // store inorder traversal values
     vector<int> arr;
-    // Call the preorder traversal function
-    preorder(root, arr);
+    // Call the inorder traversal function
+    inorder(root, arr);
     // Return the resulting vector
-    // containing preorder traversal values
+    // containing inorder traversal values
     return arr;
 }
 
@@ -63,13 +61,13 @@ int main()
     root->left->left = new Node(4);
     root->left->right = new Node(5);
 
-    // Getting preorder traversal
-    vector<int> result = preOrder(root);
+    // Getting inorder traversal
+    vector<int> result = inOrder(root);
 
-    // Displaying the preorder traversal result
-    cout << "Preorder Traversal: ";
+    // Displaying the inorder traversal result
+    cout << "Inorder Traversal: ";
     // Output each value in the
-    // preorder traversal result
+    // inorder traversal result
     for (int val : result)
     {
         cout << val << " ";
