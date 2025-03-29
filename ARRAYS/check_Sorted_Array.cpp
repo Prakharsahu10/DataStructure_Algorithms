@@ -43,3 +43,4 @@ int main()
 
     printf("%s", isSorted(arr, n) ? "True" : "False");
 }
+
