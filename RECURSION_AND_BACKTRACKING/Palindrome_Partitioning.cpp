@@ -63,3 +63,6 @@ private:
         return true;
     }
 };
+
+// Time Complexity: O(2^n * n) where n is the length of the string s. The 2^n comes from the fact that we can have at most 2^n partitions, and for each partition, we need to check if it is a palindrome which takes O(n) time.
+// Space Complexity: O(n) for the recursion stack and the path vector. The maximum depth of the recursion stack is n, and the path vector can also store at most n strings in the worst case.
