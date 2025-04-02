@@ -91,3 +91,10 @@ int main()
 
     return 0;
 }
+
+// Output: DDRDRR DRDDRR
+// Explanation: The rat can reach the destination at (3, 3) from (0, 0) by two paths - DRDDRR and DDRDRR, when printed in sorted order we get DDRDRR DRDDRR.
+// Time Complexity: O(4^(N^2)), where N is the size of the matrix. This is because in the worst case, we can explore all possible paths in the matrix, and there are 4 possible directions to move from each cell.
+// Space Complexity: O(N^2), where N is the size of the matrix. This is because we are using a recursive stack to keep track of the path taken, and in the worst case, the maximum depth of the recursion can be N^2 (if we visit all cells in the matrix).
+// The space complexity also includes the space used to store the result, which can be O(N^2) in the worst case if all paths are valid and stored in the result vector.
+// Note: The code assumes that the input matrix is a square matrix of size N x N. If the input matrix is not square, the code may need to be modified accordingly.  
