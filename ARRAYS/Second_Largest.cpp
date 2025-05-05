@@ -75,3 +75,6 @@ int main()
     cout << "Second largest is " << sL << endl;
     return 0;
 }
+
+// Time Complexity: O(n), where n is the number of elements in the array.
+// Space Complexity: O(1), as we are using only a constant amount of space.

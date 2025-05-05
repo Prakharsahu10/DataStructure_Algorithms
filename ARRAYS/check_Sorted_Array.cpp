@@ -44,3 +44,8 @@ int main()
     printf("%s", isSorted(arr, n) ? "True" : "False");
 }
 
+// Time Complexity: O(n), where n is the number of elements in the array.
+// Space Complexity: O(1), as we are using only a constant amount of space.
+// The space complexity is O(1) because we are not using any extra space that grows with the input size. We are only using a few variables to store the current index and the size of the array, which do not depend on the input size. 
+// Therefore, the space complexity is constant, O(1).
+// The time complexity is O(n) because we are iterating through the array once, checking each element against its predecessor. This means that the time taken to run the algorithm grows linearly with the size of the input array.
