@@ -40,3 +40,8 @@ function solve(arr,n) {
 let n = 5;
 let arr = [1,2,3,4,5];
 solve(arr,n);
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+// where n is the number of elements in the array.
+// The time complexity is O(n) because we are iterating through the array once.
+// The space complexity is O(1) because we are not using any extra space that grows with the input size.

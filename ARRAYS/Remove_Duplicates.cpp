@@ -26,15 +26,17 @@ Output:
 
 */
 
-function removeDuplicates(arr) {
-    let i = 0;
+function removeDuplicates(arr) {    
+    let i = 0; 
     for (let j = 1; j<arr.length; j++) {
-        if(arr[i] !== arr[j]) {
+        if(arr[i] !== arr[j]) {   
             i++;
             arr[i] = arr[j];
+          i++;
+            arr[i] = arr[j]; 
         }
     }
-    return i+1;
+    return i+1; 
 }
 
 const arr = [1,1,2,2,2,3,3];
@@ -44,3 +46,9 @@ console.log("The array after removing duplicate elements is: ");
 for (let i = 0; i<k; i++) {
     console.log(arr[i]);
 }
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+// where n is the number of elements in the array.
+// The time complexity is O(n) because we are iterating through the array once.
+// The space complexity is O(1) because we are not using any extra space that grows with the input size.
