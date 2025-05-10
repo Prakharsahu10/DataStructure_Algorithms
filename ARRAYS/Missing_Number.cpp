@@ -52,3 +52,9 @@ int main()
     return 0;
 }
 
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+// where n is the number of elements in the array.
+// The time complexity is O(n) because we are iterating through the array once to calculate the sum of its elements.
+// The space complexity is O(1) because we are using a constant amount of extra space to store the sum and the missing number.
+
