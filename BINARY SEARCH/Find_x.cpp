@@ -36,3 +36,8 @@ int main()
              << ind << endl;
     return 0;
 }
+
+// Time complexity: O(log n)
+// Space complexity: O(1)
+// where n is the number of elements in the array
+
